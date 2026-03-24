@@ -1,0 +1,125 @@
+:root {
+  --color-bg: #000;
+  --color-text: #fff;
+  --color-text2: #7b7b7b;
+  --color-primary: #7e0f18;
+  --color-secondary: #d92323;
+  --color-secondary1: #732424;
+  --color-secondary2: #f2e852;
+
+  --font-logo: "Bebas Neue", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-menu: "Russo One", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  border: 2px solid var(--color-bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-secondary);
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-bg);
+}
+
+/* === MAIN WRAPPER === */
+.main-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-content {
+  transition:
+    filter 0.5s ease,
+    opacity 0.5s ease;
+  will-change: filter, opacity;
+}
+
+/* === PROFILE OVERLAY === */
+.profile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 2000;
+
+  display: block;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  pointer-events: auto;
+
+  /* sembunyikan scrollbar */
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.profile-overlay::-webkit-scrollbar {
+  display: none;
+}
+
+.profile-section {
+  pointer-events: auto;
+}
+
+@supports (content-visibility: auto) {
+  .profile-overlay .profile-section,
+  .profile-overlay .profile-skill-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1100px;
+  }
+}
+
+/* === ANIMASI === */
+.profile-content {
+  max-width: 600px;
+  margin: auto;
+  animation: fadeUp 0.8s ease forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* === OPTIMISASI GPU === */
+.cinematic-overlay,
+.profile-overlay,
+.main-content {
+  transform: translateZ(0);
+}
+.main-content.blurred {
+  filter: blur(10px);
+  opacity: 0.6;
+  transition:
+    filter 0.5s ease,
+    opacity 0.5s ease;
+  will-change: filter, opacity;
+}

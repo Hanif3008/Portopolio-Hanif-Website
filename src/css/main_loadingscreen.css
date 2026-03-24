@@ -1,0 +1,254 @@
+.loading-screen-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.loading-bg {
+  width: 100%;
+  position: relative;
+}
+.loading-bg img {
+  width: 100%;
+  height: 110vh;
+}
+
+.loading-ym {
+  position: absolute;
+  font-family: var(--font-menu);
+  top: -30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  left: 20px;
+  gap: 15px;
+}
+.loading-ym h2 {
+  font-size: 45px;
+  color: var(--color-bg);
+  text-shadow: -2px -2px 0 var(--color-text), 6px -3px 0 var(--color-text), -4px 4px 0 var(--color-text), 2px 2px 0 var(--color-text);
+  letter-spacing: 1px;
+}
+.loading-date {
+  /* background-color: aqua; */
+  width: 100%;
+  font-family: var(--font-menu);
+  position: absolute;
+  bottom: 80px;
+}
+.date-item1 {
+  position: absolute;
+  left: 100px;
+  bottom: 250px;
+}
+
+.date-item1 h3 {
+  font-size: 100px;
+  position: absolute;
+  top: -200px;
+  color: var(--color-bg);
+  font-weight: 900;
+  text-transform: uppercase;
+  transform: rotate(-5deg) skew(-5deg);
+  text-shadow: -3px -3px 0 var(--color-text), 3px -3px 0 var(--color-text), -3px 3px 0 var(--color-text), 3px 3px 0 var(--color-text), -4px 0px 0 var(--color-text), 4px 0px 0 var(--color-text), 0px -4px 0 var(--color-text), 0px 4px 0 var(--color-text), -5px 0 0 var(--color-text), 5px 0 0 var(--color-text), 0 -5px 0 var(--color-text), 0 5px 0 var(--color-text);
+}
+
+.date-item1 p {
+  transform: rotate(-5deg) skew(-5deg);
+  font-size: 26px;
+  position: absolute;
+  text-transform: uppercase;
+  top: -40px;
+  left: 30px;
+  color: var(--color-bg);
+  font-weight: 900;
+  text-shadow: -3px -3px 0 var(--color-text), 3px -3px 0 var(--color-text), -3px 3px 0 var(--color-text), 3px 3px 0 var(--color-text), -4px 0px 0 var(--color-text), 4px 0px 0 var(--color-text), 0px -4px 0 var(--color-text), 0px 4px 0 var(--color-text), -5px 0 0 var(--color-text), 5px 0 0 var(--color-text), 0 -5px 0 var(--color-text), 0 5px 0 var(--color-text);
+}
+
+.date-item2 {
+  position: absolute;
+  left: 350px;
+  bottom: 200px;
+}
+.date-item2 h3 {
+  font-size: 100px;
+  position: absolute;
+  top: -150px;
+  color: var(--color-bg);
+  text-transform: uppercase;
+  font-weight: 900;
+  transform: rotate(-5deg) skew(-5deg);
+  text-shadow: -3px -3px 0 var(--color-text), 3px -3px 0 var(--color-text), -3px 3px 0 var(--color-text), 3px 3px 0 var(--color-text), -4px 0px 0 var(--color-text), 4px 0px 0 var(--color-text), 0px -4px 0 var(--color-text), 0px 4px 0 var(--color-text), -5px 0 0 var(--color-text), 5px 0 0 var(--color-text), 0 -5px 0 var(--color-text), 0 5px 0 var(--color-text);
+}
+.date-item2 p {
+  transform: rotate(-5deg) skew(-5deg);
+  font-size: 26px;
+  position: absolute;
+  top: 10px;
+  left: -50px;
+  color: var(--color-bg);
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: -3px -3px 0 var(--color-text), 3px -3px 0 var(--color-text), -3px 3px 0 var(--color-text), 3px 3px 0 var(--color-text), -4px 0px 0 var(--color-text), 4px 0px 0 var(--color-text), 0px -4px 0 var(--color-text), 0px 4px 0 var(--color-text), -5px 0 0 var(--color-text), 5px 0 0 var(--color-text), 0 -5px 0 var(--color-text), 0 5px 0 var(--color-text);
+}
+.date-item3 {
+  position: absolute;
+  left: 600px;
+  bottom: 100px;
+}
+.date-item3 h3 {
+  font-size: 120px;
+  position: absolute;
+  top: -200px;
+  color: red;
+  font-weight: 900;
+  text-transform: uppercase;
+  transform: rotate(-5deg) skew(-5deg);
+  text-shadow: -3px -3px 0 var(--color-text), 3px -3px 0 var(--color-text), -3px 3px 0 var(--color-text), 3px 3px 0 var(--color-text), -4px 0px 0 var(--color-text), 4px 0px 0 var(--color-text), 0px -4px 0 var(--color-text), 0px 4px 0 var(--color-text), -5px 0 0 var(--color-text), 5px 0 0 var(--color-text), 0 -5px 0 var(--color-text), 0 5px 0 var(--color-text);
+}
+.date-item3 p {
+  transform: rotate(-5deg) skew(-5deg);
+  font-size: 26px;
+  position: absolute;
+  top: -5px;
+  text-transform: uppercase;
+  left: -30px;
+  color: var(--color-bg);
+  font-weight: 900;
+  text-shadow: -3px -3px 0 var(--color-text), 3px -3px 0 var(--color-text), -3px 3px 0 var(--color-text), 3px 3px 0 var(--color-text), -4px 0px 0 var(--color-text), 4px 0px 0 var(--color-text), 0px -4px 0 var(--color-text), 0px 4px 0 var(--color-text), -5px 0 0 var(--color-text), 5px 0 0 var(--color-text), 0 -5px 0 var(--color-text), 0 5px 0 var(--color-text);
+}
+.date-item4 {
+  position: absolute;
+  right: 500px;
+  bottom: 150px;
+}
+.date-item4 h3 {
+  font-size: 100px;
+  position: absolute;
+  top: -200px;
+  color: red;
+  font-weight: 900;
+  text-transform: uppercase;
+  transform: rotate(5deg) skew(5deg);
+  text-shadow: -3px -3px 0 var(--color-text), 3px -3px 0 var(--color-text), -3px 3px 0 var(--color-text), 3px 3px 0 var(--color-text), -4px 0px 0 var(--color-text), 4px 0px 0 var(--color-text), 0px -4px 0 var(--color-text), 0px 4px 0 var(--color-text), -5px 0 0 var(--color-text), 5px 0 0 var(--color-text), 0 -5px 0 var(--color-text), 0 5px 0 var(--color-text);
+}
+.date-item4 p {
+  transform: rotate(5deg) skew(5deg);
+  font-size: 26px;
+  position: absolute;
+  top: -35px;
+  left: -30px;
+  color: var(--color-bg);
+  text-transform: uppercase;
+  font-weight: 900;
+  text-shadow: -3px -3px 0 var(--color-text), 3px -3px 0 var(--color-text), -3px 3px 0 var(--color-text), 3px 3px 0 var(--color-text), -4px 0px 0 var(--color-text), 4px 0px 0 var(--color-text), 0px -4px 0 var(--color-text), 0px 4px 0 var(--color-text), -5px 0 0 var(--color-text), 5px 0 0 var(--color-text), 0 -5px 0 var(--color-text), 0 5px 0 var(--color-text);
+}
+.date-item5 {
+  position: absolute;
+  right: 220px;
+  bottom: 220px;
+}
+.date-item5 h3 {
+  font-size: 100px;
+  position: absolute;
+  top: -200px;
+  color: var(--color-bg);
+  font-weight: 900;
+  text-transform: uppercase;
+  transform: rotate(5deg) skew(5deg);
+  text-shadow: -3px -3px 0 var(--color-text), 3px -3px 0 var(--color-text), -3px 3px 0 var(--color-text), 3px 3px 0 var(--color-text), -4px 0px 0 var(--color-text), 4px 0px 0 var(--color-text), 0px -4px 0 var(--color-text), 0px 4px 0 var(--color-text), -5px 0 0 var(--color-text), 5px 0 0 var(--color-text), 0 -5px 0 var(--color-text), 0 5px 0 var(--color-text);
+}
+.date-item5 p {
+  transform: rotate(5deg) skew(5deg);
+  font-size: 26px;
+  position: absolute;
+  top: -40px;
+  left: -30px;
+  color: var(--color-bg);
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: -3px -3px 0 var(--color-text), 3px -3px 0 var(--color-text), -3px 3px 0 var(--color-text), 3px 3px 0 var(--color-text), -4px 0px 0 var(--color-text), 4px 0px 0 var(--color-text), 0px -4px 0 var(--color-text), 0px 4px 0 var(--color-text), -5px 0 0 var(--color-text), 5px 0 0 var(--color-text), 0 -5px 0 var(--color-text), 0 5px 0 var(--color-text);
+}
+.loading-bar {
+  position: absolute;
+  bottom: -30px;
+  right: 50px;
+  font-family: "Impact", "Arial Black", sans-serif;
+  color: var(--color-text);
+}
+
+.loading-subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.loading-title,
+.loading-footer {
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color-bg);
+  text-shadow: -3px -3px 0 var(--color-text), 3px -3px 0 var(--color-text), -3px 3px 0 var(--color-text), 3px 3px 0 var(--color-text), -4px 0px 0 var(--color-text), 4px 0px 0 var(--color-text), 0px -4px 0 var(--color-text), 0px 4px 0 var(--color-text), -5px 0 0 var(--color-text), 5px 0 0 var(--color-text), 0 -5px 0 var(--color-text), 0 5px 0 var(--color-text);
+  transform: skew(-8deg);
+  margin: 5px 0;
+}
+
+.loading-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: skew(-8deg);
+}
+
+.bar-outline {
+  position: relative;
+  width: 200px;
+  height: 25px;
+  background: var(--color-text);
+  border: 3px solid var(--color-bg);
+  box-shadow: 3px 3px 0 var(--color-bg);
+  overflow: hidden;
+}
+
+.bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 100%;
+  background: red;
+  border-right: 3px solid black;
+}
+
+.bar-percent {
+  font-size: 35px;
+  font-weight: 900;
+  color: red;
+  text-shadow: 3px 3px 0 black;
+  margin: 0;
+}
+.loading-continue-btn {
+  background: red;
+  color: var(--color-text);
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0 black;
+  transform: skew(-8deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.loading-continue-btn:hover {
+  background: var(--color-text);
+  color: red;
+  box-shadow: 5px 5px 0 black;
+}

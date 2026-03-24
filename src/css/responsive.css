@@ -1,0 +1,616 @@
+/* NAVBAR AND HERO SECTION */
+
+@media screen and (max-width: 975px) {
+  .svg-mask {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .svg-mask {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .hanif {
+    font-size: 300px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .svg-mask {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .portopolio-nav {
+    grid-template-columns: 1fr 1fr;
+  }
+  .nav-left {
+    display: none;
+  }
+  .nav-mid ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 30px;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: var(--color-primary);
+    border-radius: 15px;
+  }
+  .nav-mid ul li {
+    font-family: var(--font-menu);
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.2s ease-in-out;
+    color: var(--color-text);
+  }
+
+  /* Date */
+  .hero-date {
+    background-color: var(--color-bg);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 20%;
+    font-family: var(--font-menu);
+  }
+
+  .date-day {
+    color: var(--color-bg);
+    position: absolute;
+    font-size: 35px;
+    top: -50px;
+    left: 15px;
+    transform: rotate(8deg);
+    text-shadow: -2px -2px 0 var(--color-primary), 6px -3px 0 var(--color-primary), -4px 4px 0 var(--color-primary), 2px 2px 0 var(--color-primary);
+  }
+
+  .date-slash {
+    color: var(--color-bg);
+    transform: rotate(30deg);
+    font-size: 35px;
+    position: absolute;
+    left: 45px;
+    top: -30px;
+    text-shadow: 2px 2px 0 var(--color-primary), 6px -3px 0 var(--color-primary), -4px 4px 0 var(--color-primary), 2px 2px 0 var(--color-primary);
+  }
+
+  .date-month {
+    color: var(--color-bg);
+    position: absolute;
+    font-size: 70px;
+    top: -125px;
+    left: 60px;
+    text-shadow: -2px -2px 0 var(--color-primary), 6px -3px 0 var(--color-primary), -4px 4px 0 var(--color-primary), 2px 2px 0 var(--color-primary);
+  }
+
+  .date-day-name {
+    color: var(--color-bg);
+    transform: rotate(-5deg);
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 19px;
+    top: 20px;
+    left: 60px;
+    text-shadow: -4px -2px 0 var(--color-primary), 6px 0px 0 var(--color-primary), -6px 4px 0 var(--color-primary), 2px 2px 0 var(--color-primary);
+  }
+
+  .date-sun {
+    transform: rotate(-15deg);
+    position: absolute;
+    left: 140px;
+    top: 0;
+    color: var(--color-bg);
+    background-color: var(--color-primary);
+  }
+
+  .date-sun ion-icon {
+    font-size: 45px;
+    animation: spin 10s linear infinite; /* animasi berputar */
+  }
+
+  /* animasi berputar */
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  .svg-mask {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .portopolio-nav {
+    grid-template-columns: 1fr 1fr;
+    padding: 5px 5px;
+  }
+  .nav-left {
+    display: none;
+  }
+  .nav-mid ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 20px;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: var(--color-primary);
+    border-radius: 15px;
+  }
+  .nav-mid ul li {
+    font-family: var(--font-menu);
+    font-weight: 500;
+    font-size: 12px;
+    transition: 0.2s ease-in-out;
+    color: var(--color-text);
+  }
+  .nav-right .nav-item a ion-icon {
+    font-size: 25px;
+    color: var(--color-primary);
+  }
+
+  /* Date */
+  .hero-date {
+    background-color: var(--color-bg);
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 20%;
+    font-family: var(--font-menu);
+  }
+
+  .date-day {
+    color: var(--color-bg);
+    position: absolute;
+    font-size: 30px;
+    top: -50px;
+    left: 15px;
+    transform: rotate(8deg);
+    text-shadow: -2px -2px 0 var(--color-primary), 6px -3px 0 var(--color-primary), -4px 4px 0 var(--color-primary), 2px 2px 0 var(--color-primary);
+  }
+
+  .date-slash {
+    color: var(--color-bg);
+    transform: rotate(30deg);
+    font-size: 30px;
+    position: absolute;
+    left: 45px;
+    top: -30px;
+    text-shadow: 2px 2px 0 var(--color-primary), 6px -3px 0 var(--color-primary), -4px 4px 0 var(--color-primary), 2px 2px 0 var(--color-primary);
+  }
+
+  .date-month {
+    color: var(--color-bg);
+    position: absolute;
+    font-size: 65px;
+    top: -125px;
+    left: 60px;
+    text-shadow: -2px -2px 0 var(--color-primary), 6px -3px 0 var(--color-primary), -4px 4px 0 var(--color-primary), 2px 2px 0 var(--color-primary);
+  }
+
+  .date-day-name {
+    color: var(--color-bg);
+    transform: rotate(-5deg);
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 14px;
+    top: 20px;
+    left: 60px;
+    text-shadow: -4px -2px 0 var(--color-primary), 6px 0px 0 var(--color-primary), -6px 4px 0 var(--color-primary), 2px 2px 0 var(--color-primary);
+  }
+
+  .date-sun {
+    transform: rotate(-15deg);
+    position: absolute;
+    left: 130px;
+    top: -10px;
+    color: var(--color-bg);
+    background-color: var(--color-primary);
+  }
+
+  .date-sun ion-icon {
+    font-size: 40px;
+    animation: spin 10s linear infinite; /* animasi berputar */
+  }
+
+  /* animasi berputar */
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .music-player {
+    /* background-color: aqua; */
+    width: 100%;
+    position: absolute;
+    height: 100%;
+  }
+  .music-player-mini {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    background-color: var(--color-bg);
+    border: 4px solid var(--color-primary);
+    padding: 5px 15px;
+    border-radius: 20px;
+  }
+
+  .music-player-mini-img img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border: 3px solid var(--color-primary);
+    border-radius: 10px;
+  }
+  .music-title h3 {
+    font-family: var(--font-menu);
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--color-text);
+    margin-bottom: -15px;
+  }
+  .music-subtitle h4 {
+    font-family: var(--font-menu);
+    font-weight: 400;
+    font-size: 10px;
+    color: var(--color-text2);
+  }
+  .music-player-expand {
+    position: absolute;
+    right: 65px;
+    top: 85px;
+    cursor: pointer;
+    z-index: 999;
+  }
+  .music-player-expand ion-icon {
+    color: var(--color-text);
+    font-size: 26px;
+    transition: 0.2s ease;
+  }
+  .music-player-expand ion-icon:hover {
+    color: var(--color-primary);
+  }
+
+  .music-player-big {
+    right: 0;
+    position: absolute;
+    top: 110px;
+    background-color: var(--color-primary);
+    z-index: 9999;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    z-index: 9999;
+  }
+  .music-player-big-img img {
+    width: 200px;
+  }
+  .music-player-big .music-info {
+    text-align: center;
+    margin-top: 10px;
+    font-family: var(--font-menu);
+  }
+  .music-player-big .music-info h3 {
+    color: var(--color-text);
+    font-weight: 400;
+    margin-top: -5px;
+    margin-bottom: -15px;
+    font-size: 20px;
+  }
+  .music-player-big .music-info p {
+    font-size: 14px;
+    color: var(--color-text2);
+    font-weight: 400;
+  }
+  .progress-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    margin-left: 10px;
+    font-size: 10px;
+    color: var(--color-text2);
+    margin-top: 5px;
+  }
+
+  .progress-section input[type="range"] {
+    flex: 1;
+    margin: 0 5px;
+    accent-color: var(--color-text);
+    cursor: pointer;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 26px;
+    color: var(--color-text);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    transition: 0.2s ease;
+  }
+
+  .controls ion-icon {
+    font-size: 24px;
+  }
+  .controls ion-icon:hover {
+    color: var(--color-text2);
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 350px) {
+  .svg-mask {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .portopolio-nav {
+    grid-template-columns: 1fr 1fr;
+    padding: 5px 5px;
+  }
+  .nav-left {
+    display: none;
+  }
+  .nav-mid ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 10px;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: var(--color-primary);
+    border-radius: 15px;
+  }
+  .nav-mid ul li {
+    font-family: var(--font-menu);
+    font-weight: 500;
+    font-size: 12px;
+    transition: 0.2s ease-in-out;
+    color: var(--color-text);
+  }
+  .nav-right .nav-item a ion-icon {
+    font-size: 25px;
+    color: var(--color-primary);
+  }
+
+  /* Date */
+  .hero-date {
+    background-color: var(--color-bg);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 20%;
+    font-family: var(--font-menu);
+  }
+
+  .date-day {
+    color: var(--color-bg);
+    position: absolute;
+    font-size: 20px;
+    top: -50px;
+    left: 15px;
+    transform: rotate(8deg);
+    text-shadow: -2px -2px 0 var(--color-primary), 6px -3px 0 var(--color-primary), -4px 4px 0 var(--color-primary), 2px 2px 0 var(--color-primary);
+  }
+
+  .date-slash {
+    color: var(--color-bg);
+    transform: rotate(30deg);
+    font-size: 20px;
+    position: absolute;
+    left: 30px;
+    top: -35px;
+    text-shadow: 2px 2px 0 var(--color-primary), 6px -3px 0 var(--color-primary), -4px 4px 0 var(--color-primary), 2px 2px 0 var(--color-primary);
+  }
+
+  .date-month {
+    color: var(--color-bg);
+    position: absolute;
+    font-size: 55px;
+    top: -125px;
+    left: 40px;
+    text-shadow: -2px -2px 0 var(--color-primary), 6px -3px 0 var(--color-primary), -4px 4px 0 var(--color-primary), 2px 2px 0 var(--color-primary);
+  }
+
+  .date-day-name {
+    color: var(--color-bg);
+    transform: rotate(-5deg);
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 12px;
+    top: -5px;
+    left: 40px;
+    text-shadow: -4px -2px 0 var(--color-primary), 6px 0px 0 var(--color-primary), -6px 4px 0 var(--color-primary), 2px 2px 0 var(--color-primary);
+  }
+
+  .date-sun {
+    transform: rotate(-15deg);
+    position: absolute;
+    left: 90px;
+    top: -30px;
+    color: var(--color-bg);
+    background-color: var(--color-primary);
+  }
+
+  .date-sun ion-icon {
+    font-size: 30px;
+    animation: spin 10s linear infinite; /* animasi berputar */
+  }
+
+  /* animasi berputar */
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .music-player {
+    /* background-color: aqua; */
+    width: 100%;
+    position: absolute;
+    height: 100%;
+  }
+  .music-player-mini {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30px;
+    background-color: var(--color-bg);
+    border: 4px solid var(--color-primary);
+    padding: 0px 5px;
+    border-radius: 20px;
+  }
+
+  .music-player-mini-img img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border: 3px solid var(--color-primary);
+    border-radius: 10px;
+  }
+  .music-title h3 {
+    font-family: var(--font-menu);
+    font-weight: 400;
+    font-size: 11px;
+    color: var(--color-text);
+    margin-bottom: -10px;
+  }
+  .music-subtitle h4 {
+    font-family: var(--font-menu);
+    font-weight: 400;
+    font-size: 9px;
+    color: var(--color-text2);
+  }
+  .music-player-expand {
+    position: absolute;
+    right: 65px;
+    top: 85px;
+    cursor: pointer;
+    z-index: 999;
+  }
+  .music-player-expand ion-icon {
+    color: var(--color-text);
+    font-size: 26px;
+    transition: 0.2s ease;
+  }
+  .music-player-expand ion-icon:hover {
+    color: var(--color-primary);
+  }
+
+  .music-player-big {
+    right: 0;
+    position: absolute;
+    top: 110px;
+    background-color: var(--color-primary);
+    z-index: 9999;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    z-index: 9999;
+  }
+  .music-player-big-img img {
+    width: 200px;
+  }
+  .music-player-big .music-info {
+    text-align: center;
+    margin-top: 10px;
+    font-family: var(--font-menu);
+  }
+  .music-player-big .music-info h3 {
+    color: var(--color-text);
+    font-weight: 400;
+    margin-top: -5px;
+    margin-bottom: -15px;
+    font-size: 20px;
+  }
+  .music-player-big .music-info p {
+    font-size: 14px;
+    color: var(--color-text2);
+    font-weight: 400;
+  }
+  .progress-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    margin-left: 10px;
+    font-size: 10px;
+    color: var(--color-text2);
+    margin-top: 5px;
+  }
+
+  .progress-section input[type="range"] {
+    flex: 1;
+    margin: 0 5px;
+    accent-color: var(--color-text);
+    cursor: pointer;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 26px;
+    color: var(--color-text);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    transition: 0.2s ease;
+  }
+
+  .controls ion-icon {
+    font-size: 24px;
+  }
+  .controls ion-icon:hover {
+    color: var(--color-text2);
+    cursor: pointer;
+  }
+}
+/* NAVBAR AND HERO SECTION */
