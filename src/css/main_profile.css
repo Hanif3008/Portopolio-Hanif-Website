@@ -3,7 +3,7 @@
   width: 100%;
   min-height: 110vh;
   color: var(--color-text);
-  background: url("images/profile-section5.jpeg") center/cover no-repeat;
+  background: url("/images/profile-section5.jpeg") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@
   scroll-snap-align: start;
 }
 #projects {
-  background: url("images/profile-section3.jpeg") center/cover no-repeat;
+  background: url("/images/profile-section3.jpeg") center/cover no-repeat;
 }
 .myprofile-menu {
   position: absolute;

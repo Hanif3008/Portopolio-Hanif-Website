@@ -47,7 +47,7 @@ function MainProfile() {
         </div> */}
       <div className="profile-container">
         <div className="profile-photo">
-          <img src="images/profilepic1.jpeg" alt="Hanif Profile" loading="lazy" decoding="async" />
+          <img src="/images/profilepic1.jpeg" alt="Hanif Profile" loading="lazy" decoding="async" />
         </div>
         <div className="profile-info">
           <h2 className="profile-typing">

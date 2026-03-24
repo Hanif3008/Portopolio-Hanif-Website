@@ -3,7 +3,7 @@
   width: 100%;
   min-height: 110vh;
   color: var(--color-text);
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("images/profile-section4.jpeg") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("/images/profile-section4.jpeg") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;

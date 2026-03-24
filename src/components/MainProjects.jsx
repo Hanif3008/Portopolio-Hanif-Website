@@ -100,7 +100,7 @@ function MainProjects() {
           'Used by enterprise and government clients, including national-scale events.',
         ]}
         chips={['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'CodeIgniter 3', 'REST API']}
-        images={['images/tampil.PNG', 'images/tampil2.PNG']}
+        images={['/images/tampil.PNG', '/images/tampil2.PNG']}
       />
 
       <ProjectSection
@@ -118,7 +118,7 @@ function MainProjects() {
           'Delivered production-ready features used in real learning and certification workflows.',
         ]}
         chips={['Laravel', 'HTML', 'CSS', 'JavaScript']}
-        images={['images/flungo.PNG', 'images/flungo1.PNG']}
+        images={['/images/flungo.PNG', '/images/flungo1.PNG']}
       />
     </>
   )

@@ -1,7 +1,7 @@
 .project-section {
   background:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.7)),
-    url("images/profile-section2.jpg") center/cover no-repeat;
+    url("/images/profile-section2.jpg") center/cover no-repeat;
 }
 
 .project-section .profile-darklayer {

@@ -52,7 +52,7 @@
   left: 0;
   width: 300%;
   height: 550px;
-  background-image: url("images/silhouette.png");
+  background-image: url("/images/silhouette.png");
   background-repeat: repeat-x;
   background-size: contain;
   background-position: 0 bottom;

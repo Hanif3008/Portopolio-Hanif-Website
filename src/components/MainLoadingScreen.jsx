@@ -50,7 +50,7 @@ function MainLoadingScreen({onContinue}) {
   return (
     <div className="loading-screen-wrapper">
       <div className="loading-bg">
-        <img src="images/personascreen2.jpeg" alt="" decoding="async" fetchpriority="high" />
+        <img src="/images/personascreen2.jpeg" alt="" decoding="async" fetchpriority="high" />
       </div>
       <div className="loading-ym">
         <h2 className="year">

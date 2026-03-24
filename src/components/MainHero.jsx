@@ -70,8 +70,8 @@ const MainHero = memo(() => {
               </defs>
               <foreignObject x="0" y="0" width="100%" height="100%" mask="url(#text-mask)">
                 <div className={`video-wrapper ${isFading ? "fade" : ""}`}>
-                  <video src={`videos/video${frontVideo}.mp4`} autoPlay loop muted playsInline preload="metadata" className="video front" />
-                  <video ref={backRef} src={`videos/video${backVideo}.mp4`} autoPlay loop muted playsInline preload="metadata" className="video back" />
+                  <video src={`/videos/video${frontVideo}.mp4`} autoPlay loop muted playsInline preload="metadata" className="video front" />
+                  <video ref={backRef} src={`/videos/video${backVideo}.mp4`} autoPlay loop muted playsInline preload="metadata" className="video back" />
                 </div>
               </foreignObject>
             </svg>
