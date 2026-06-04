@@ -1,72 +1,48 @@
-import { useEffect, useState } from "react";
-
-const texts = ["Hi there...", "Let me introduce myself", "My name is..."];
+const profilePoints = [
+  'Experienced in redesigning and developing large sets of responsive pages for production web platforms.',
+  'Comfortable collaborating with backend teams and adapting interfaces to real product requirements.',
+  'Prioritizes clean code, reusable UI structure, and maintainable frontend architecture.',
+]
 
 function MainProfile() {
-  const [index, setIndex] = useState(0);
-  const [subIndex, setSubIndex] = useState(0);
-  const [deleting, setDeleting] = useState(false);
-
-  useEffect(() => {
-    if (index === texts.length) return;
-
-    const currentText = texts[index];
-    const typeSpeed = deleting ? 50 : 150; 
-    
-    if (subIndex === currentText.length + 1 && !deleting) {
-      const timeout = setTimeout(() => setDeleting(true), 800);
-      return () => clearTimeout(timeout);
-    }
-
-    if (subIndex === 0 && deleting) {
-      setDeleting(false);
-      setIndex((prev) => (prev + 1) % texts.length);
-      return;
-    }
-
-    const timeout = setTimeout(() => {
-      setSubIndex((prev) => prev + (deleting ? -1 : 1));
-    }, typeSpeed);
-
-    return () => clearTimeout(timeout);
-  }, [subIndex, index, deleting]);
-
   return (
-    <section className="profile-section" id="profile">
-      <div className="profile-darklayer"></div>
-      <div className="myprofile-menu">
-        <h2>Profile</h2>
+    <section className="profile-section section-shell" id="profile">
+      <div className="section-heading">
+        <p className="section-kicker">About Me</p>
+        <h2>Frontend developer who balances visual polish with practical implementation.</h2>
       </div>
-      {/* <div className="myprofile-menu-scroll">
-          <div className="scroll-pic">
-              <ion-icon name="home"></ion-icon>
-          </div>
-          <div className="scroll-desc">
-            <p>Back to home</p>
-          </div>
-        </div> */}
+
       <div className="profile-container">
         <div className="profile-photo">
-          <img src="/images/profilepic1.jpeg" alt="Hanif Profile" loading="lazy" decoding="async" />
+          <img src="/images/profilepic1.jpeg" alt="Rizki Hanif Prasetyo" loading="lazy" decoding="async" />
         </div>
-        <div className="profile-info">
-          <h2 className="profile-typing">
-            {texts[index].substring(0, subIndex)}
-          </h2>
-          <h1 className="profile-name">Rizki Hanif Prasetyo</h1>
-          <h2 className="profile-role">Frontend Developer</h2>
 
+        <div className="profile-info">
+          <p className="profile-intro">Rizki Hanif Prasetyo</p>
+          <h3 className="profile-role">React JS Frontend Developer</h3>
           <p className="profile-desc">
-            Hi, I'm Rizki! I'm a Frontend Developer who loves turning complex designs into smooth, user-friendly digital experiences. During my 6-month journey at BISA AI, I got my hands dirty building and redesigning over 200+ web pages across multiple production-level apps.
-            <br />
-            From working on Tampil.id (which handles national-scale events for government and enterprise clients) to crafting the UI for Flungo and Finsdemy, I focus on one thing: writing clean, maintainable code that looks great on any screen. I bridge the gap between creative UI and solid backend systems to make sure everything runs perfectly.
+            I enjoy building interfaces that are structured, dependable, and easy to understand. My recent
+            experience includes redesigning and delivering web pages for products such as Tampil.id and
+            Flungo, where usability, consistency, and maintainability mattered as much as visual quality.
           </p>
+          <p className="profile-desc">
+            I work best when translating design intent into a frontend that is clean in code, clear in user
+            flow, and stable enough to support real business needs. I am especially interested in roles where
+            I can contribute to product quality through modern React development and thoughtful UI execution.
+          </p>
+
+          <div className="profile-points">
+            {profilePoints.map((item) => (
+              <div key={item} className="profile-point">
+                <span></span>
+                <p>{item}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-
-      <div className="triangle-bg"></div>
     </section>
-  );
+  )
 }
 
-export default MainProfile;
+export default MainProfile

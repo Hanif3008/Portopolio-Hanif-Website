@@ -1,159 +1,55 @@
 .profile-skill-section {
   position: relative;
-  width: 100%;
-  min-height: 110vh;
-  color: var(--color-text);
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("/images/profile-section4.jpeg") center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  pointer-events: auto;
-  scroll-snap-align: start;
 }
 
-.profile-skill-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.profile-darklayer {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25);
-  z-index: 1;
-}
-.profile-skill-container .profile-skill-title {
-  text-align: center;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
 
-.profile-skill-container .profile-skill-title h1 {
-  font-family: var(--font-menu);
-  font-size: 36px;
-  color: var(--color-text);
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.profile-skill-container .profile-skill-title p {
-  font-family: var(--font-menu);
-  font-size: 16px;
-  color: var(--color-text2);
-  margin-top: -10px;
-  text-transform: uppercase;
-}
-.profile-skill-category {
-  width: 40%;
-  border: 1px solid var(--color-primary);
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.profile-skill-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.profile-skill-item ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  padding-right: 50px;
+.skill-card {
+  display: grid;
+  gap: 22px;
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid var(--border-soft);
+  background:
+    linear-gradient(180deg, rgba(126, 15, 24, 0.14), rgba(255, 255, 255, 0.03)),
+    rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-main);
 }
 
-.profile-skill-item ul li {
-  font-family: var(--font-menu);
-  font-size: 12px;
-  color: var(--color-text);
-  padding: 10px 20px;
-  border: 1px solid var(--color-primary);
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  font-weight: 400;
-}
-.profile-skill-item .active {
-  background-color: var(--color-primary);
-  color: var(--color-bg);
-  transition: 0.3s ease;
-}
-.profile-skill-item ul li:hover {
-  background-color: var(--color-primary);
-  color: var(--color-bg);
-  transition: 0.3s ease;
-}
-.profile-skill-sets {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid var(--color-primary);
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 60%;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.profile-sets-title h2 {
-  font-family: var(--font-menu);
-  font-size: 18px;
-  color: var(--color-text);
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-top: 10px;
-  letter-spacing: 3px;
-}
-.profile-sets-items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  /* background-color: aqua; */
-  gap: 40px;
-}
-.profile-sets-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 20px;
-  cursor: pointer;
-  border: 1px solid var(--color-primary);
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
+.skill-card-head {
+  display: grid;
+  gap: 10px;
 }
 
-.profile-sets-item img {
-  width: 24px;
-  margin-right: 5px;
+.skill-card-head h3 {
+  margin: 0;
+  font-size: 1.35rem;
 }
-.profile-sets-item ion-icon {
-  font-size: 24px;
-  margin-right: 5px;
-  color: var(--color-primary);
+
+.skill-card-head p {
+  margin: 0;
+  color: #c2c2c2;
+  line-height: 1.7;
 }
-.profile-sets-item p {
-  font-family: var(--font-menu);
-  font-size: 14px;
-  letter-spacing: 1px;
-  color: var(--color-text);
-  font-weight: 300;
+
+.skill-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-.profile-sets-item:hover {
-  background-color: var(--color-primary);
-  color: var(--color-bg);
-  transition: 0.3s ease;
-}
-.profile-sets-item:hover ion-icon {
-  color: var(--color-text);
-  transition: 0.3s ease;
-}
-.profile-sets-item:hover img {
-  filter: brightness(0) invert(1);
-  transition: 0.3s ease;
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(217, 35, 35, 0.35);
+  background: rgba(255, 255, 255, 0.04);
+  color: #ededed;
+  font-size: 0.9rem;
 }

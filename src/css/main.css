@@ -10,15 +10,41 @@
   --font-logo: "Bebas Neue", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-menu: "Russo One", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-body: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --surface-1: rgba(255, 255, 255, 0.04);
+  --surface-2: rgba(255, 255, 255, 0.08);
+  --border-soft: rgba(255, 255, 255, 0.12);
+  --shadow-main: 0 22px 60px rgba(0, 0, 0, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--color-bg);
+  background:
+    radial-gradient(circle at top, rgba(126, 15, 24, 0.22), transparent 32%),
+    linear-gradient(180deg, #050505 0%, #090909 40%, #030303 100%);
   color: var(--color-text);
   font-family: var(--font-body);
   overflow-x: hidden;
+}
+
+body,
+button,
+a {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 /* === SCROLLBAR === */
@@ -38,88 +64,94 @@ body {
   background-color: var(--color-secondary);
 }
 * {
+  box-sizing: border-box;
   scrollbar-width: thin;
   scrollbar-color: var(--color-primary) var(--color-bg);
 }
 
-/* === MAIN WRAPPER === */
-.main-wrapper {
+/* === LAYOUT === */
+.site-shell {
   position: relative;
-  overflow: hidden;
+  min-height: 100vh;
 }
 
-.main-content {
-  transition:
-    filter 0.5s ease,
-    opacity 0.5s ease;
-  will-change: filter, opacity;
+.page-content {
+  display: grid;
 }
 
-/* === PROFILE OVERLAY === */
-.profile-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(10, 10, 10, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  z-index: 2000;
-
-  display: block;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  pointer-events: auto;
-
-  /* sembunyikan scrollbar */
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-}
-.profile-overlay::-webkit-scrollbar {
-  display: none;
+.section-shell {
+  position: relative;
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 96px 0;
 }
 
-.profile-section {
-  pointer-events: auto;
+.section-heading {
+  display: grid;
+  gap: 12px;
+  max-width: 760px;
+  margin-bottom: 40px;
 }
 
-@supports (content-visibility: auto) {
-  .profile-overlay .profile-section,
-  .profile-overlay .profile-skill-section {
-    content-visibility: auto;
-    contain-intrinsic-size: 1100px;
+.section-kicker {
+  margin: 0;
+  font-family: var(--font-menu);
+  font-size: 0.82rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-secondary2);
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-text);
+  box-shadow: 0 14px 32px rgba(126, 15, 24, 0.32);
+}
+
+.button-secondary {
+  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--color-text);
+}
+
+.button-primary:hover,
+.button-secondary:hover {
+  transform: translateY(-2px);
+}
+
+.button-secondary:hover {
+  border-color: rgba(242, 232, 82, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-}
 
-/* === ANIMASI === */
-.profile-content {
-  max-width: 600px;
-  margin: auto;
-  animation: fadeUp 0.8s ease forwards;
-  will-change: transform, opacity;
-}
-
-@keyframes fadeUp {
-  from {
-    transform: translateY(40px);
-    opacity: 0;
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* === OPTIMISASI GPU === */
-.cinematic-overlay,
-.profile-overlay,
-.main-content {
-  transform: translateZ(0);
-}
-.main-content.blurred {
-  filter: blur(10px);
-  opacity: 0.6;
-  transition:
-    filter 0.5s ease,
-    opacity 0.5s ease;
-  will-change: filter, opacity;
 }
