@@ -10,41 +10,83 @@
     padding-top: 48px;
   }
 
-  .hero-metrics {
-    grid-template-columns: repeat(3, 1fr);
+  .hero-metrics,
+  .hero-metrics-bar {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .skills-grid {
     grid-template-columns: 1fr;
   }
 
-  .contact-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .contact-grid,
+  .contact-primary-grid,
+  .contact-secondary-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 860px) {
   .portopolio-nav {
-    grid-template-columns: 1fr;
-    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 64px;
+    padding: 10px 0;
   }
 
-  .brand-mark,
+  .brand-mark {
+    gap: 10px;
+  }
+
+  .brand-mark img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .brand-copy strong {
+    font-size: 0.92rem;
+  }
+
+  .brand-copy span {
+    font-size: 0.76rem;
+  }
+
+  /* Hide bulky desktop middle & right navigation */
   .nav-mid,
   .nav-right {
-    justify-self: center;
+    display: none !important;
   }
 
-  .nav-mid {
-    flex-wrap: wrap;
+  /* Show mobile menu toggle button and drawer */
+  .mobile-menu-toggle {
+    display: inline-flex;
   }
 
-  .hero-metrics {
+  .mobile-nav-drawer {
+    display: block;
+  }
+
+  .hero-metrics,
+  .hero-metrics-bar {
     grid-template-columns: 1fr;
   }
 
   .contact-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .timeline-card {
+    padding: 24px;
+  }
+
+  .timeline-card-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .timeline-meta-wrap {
+    align-items: flex-start;
   }
 }
 
@@ -78,8 +120,25 @@
     grid-template-columns: 1fr;
   }
 
-  .nav-right {
-    flex-wrap: wrap;
+  .timeline-item {
+    grid-template-columns: 24px 1fr;
+    gap: 16px;
+  }
+
+  .timeline-dot {
+    width: 18px;
+    height: 18px;
+    margin-top: 18px;
+  }
+
+  .timeline-card {
+    padding: 20px 16px;
+    margin-bottom: 24px;
+    border-radius: 14px;
+  }
+
+  .timeline-role {
+    font-size: 1.1rem;
   }
 
   .project-layout,

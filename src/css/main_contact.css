@@ -1,83 +1,389 @@
+/* =========================================================
+   CONTACT SECTION (MINIMALIST & PROFESSIONAL)
+   ========================================================= */
+
 .contact-section {
   position: relative;
-  padding-bottom: 110px;
+  padding-bottom: 64px;
 }
 
-.contact-container {
+.contact-wrapper {
   display: grid;
-  gap: 28px;
+  gap: 56px;
 }
 
-.contact-hero {
-  margin-bottom: 0;
-}
-
-.contact-title {
-  margin: 0;
-}
-
-.contact-lead {
-  margin: 0;
-  max-width: 760px;
-  color: #c7c7c7;
-  line-height: 1.8;
-}
-
-.contact-grid {
+.contact-grid-layout {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+
+/* =========================================================
+   LEFT: NARRATIVE & AVAILABILITY
+   ========================================================= */
+
+.contact-narrative {
+  display: grid;
+  gap: 20px;
+}
+
+.contact-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(68, 209, 127, 0.08);
+  border: 1px solid rgba(68, 209, 127, 0.25);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #e5e7eb;
+  width: fit-content;
+}
+
+.avail-dot {
+  position: relative;
+  display: inline-flex;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #44d17f;
+}
+
+.avail-ping {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: rgba(68, 209, 127, 0.6);
+  animation: dotPing 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.contact-heading {
+  margin: 0;
+  font-size: clamp(2.2rem, 4.4vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.contact-accent {
+  background: linear-gradient(135deg, #ffffff 30%, #f4e868 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.contact-subtext {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+/* Direct Channel Card */
+.contact-direct-card {
+  display: grid;
+  gap: 6px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(126, 15, 24, 0.08) 100%),
+    rgba(10, 10, 10, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 6px;
+}
+
+.direct-card-label {
+  font-family: var(--font-menu);
+  font-size: 0.72rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--color-secondary2);
+}
+
+.direct-card-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 1.02rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.direct-card-email:hover {
+  color: #fff275;
+}
+
+.direct-card-email ion-icon {
+  font-size: 1rem;
+  color: var(--color-secondary2);
+  transition: transform 0.2s ease;
+}
+
+.direct-card-email:hover ion-icon {
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   RIGHT: CHANNELS DECK (MINIMALIST INTERACTIVE ROWS)
+   ========================================================= */
+
+.contact-channels-deck {
+  border-radius: 24px;
+  padding: 24px;
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.04) 0%, rgba(126, 15, 24, 0.06) 40%, rgba(10, 10, 10, 0.85) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: grid;
   gap: 16px;
 }
 
-.contact-card {
-  text-decoration: none;
+.deck-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 14px;
   display: grid;
-  gap: 14px;
-  padding: 18px;
-  border-radius: 22px;
-  border: 1px solid var(--border-soft);
-  background:
-    linear-gradient(180deg, rgba(126, 15, 24, 0.12), rgba(255, 255, 255, 0.03)),
-    rgba(0, 0, 0, 0.42);
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  gap: 2px;
 }
 
-.contact-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(242, 232, 82, 0.45);
+.deck-header h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.2px;
 }
 
-.contact-card-head {
+.deck-header p {
+  margin: 0;
+  font-size: 0.84rem;
+  color: #9ca3af;
+}
+
+.deck-rows {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 10px;
+  gap: 8px;
+}
+
+.channel-row {
+  display: flex;
   align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-decoration: none;
+  transition: all 0.22s ease;
 }
 
-.contact-icon {
-  width: 42px;
-  height: 42px;
-  display: inline-flex;
+.channel-row:hover {
+  background: rgba(217, 35, 35, 0.12);
+  border-color: rgba(242, 232, 82, 0.35);
+  transform: translateX(3px);
+}
+
+.channel-icon-pill {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.contact-icon ion-icon,
-.contact-open {
   color: var(--color-secondary2);
-  font-size: 1.15rem;
+  font-size: 1.18rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
 }
 
-.contact-label {
-  margin: 0;
-  font-size: 1rem;
+.channel-row:hover .channel-icon-pill {
+  transform: scale(1.08);
+  background: rgba(217, 35, 35, 0.2);
+  border-color: rgba(217, 35, 35, 0.4);
 }
 
-.contact-desc {
+.channel-info {
+  flex: 1;
+  display: grid;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.channel-name {
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.channel-detail {
+  font-size: 0.78rem;
+  color: #9ca3af;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.channel-row:hover .channel-detail {
+  color: #cbd5e1;
+}
+
+.channel-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.channel-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 9px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.channel-copy-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(242, 232, 82, 0.4);
+  color: #ffffff;
+}
+
+.channel-copy-btn.is-copied {
+  background: rgba(68, 209, 127, 0.2);
+  border-color: rgba(68, 209, 127, 0.5);
+  color: #44d17f;
+}
+
+.channel-copy-btn ion-icon {
+  font-size: 0.82rem;
+}
+
+.channel-arrow {
+  color: #71717a;
+  font-size: 1.05rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-flex;
+}
+
+.channel-row:hover .channel-arrow {
+  color: #ffffff;
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+   FOOTER SIGNATURE BAR
+   ========================================================= */
+
+.site-footer {
+  margin-top: 16px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.footer-brand {
+  display: grid;
+  gap: 2px;
+}
+
+.footer-brand strong {
+  font-size: 0.96rem;
+  color: #ffffff;
+}
+
+.footer-brand span {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+.footer-copyright {
   margin: 0;
-  color: #c9c9c9;
-  line-height: 1.7;
-  font-size: 0.92rem;
+  color: #71717a;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  max-width: 520px;
+}
+
+.footer-back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.footer-back-to-top:hover {
+  background: rgba(217, 35, 35, 0.2);
+  border-color: rgba(217, 35, 35, 0.4);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.footer-back-to-top ion-icon {
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+   RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 1080px) {
+  .contact-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-channels-deck {
+    padding: 18px 16px;
+  }
+
+  .channel-row {
+    padding: 10px 12px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .footer-back-to-top {
+    width: 100%;
+    justify-content: center;
+  }
 }
