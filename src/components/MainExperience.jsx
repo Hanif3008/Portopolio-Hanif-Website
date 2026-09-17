@@ -7,9 +7,9 @@ const experiences = [
     role: 'Frontend Developer (Full-Time)',
     company: 'PT BISA Artifisial Indonesia',
     subCompany: 'BISA AI Academy & Enterprise Digital Solutions',
-    period: 'Feb 2024 – Present',
+    period: 'Apr 2026 – Present', // [Gambar 4: April 2026 - Now]
     badge: 'Current Role',
-    location: 'Bandung, Indonesia · Hybrid / On-site',
+    location: 'Bandung, Indonesia · On-site',
     summary: 'Spearheading frontend architecture and user interface engineering for national-scale BNSP certification portals, interactive SaaS products, and educational management platforms.',
     achievements: [
       'Architected and delivered scalable frontend systems for official BNSP certification engines (LSP TRI, LSP TRIM, CoreCertX) compliant with ISO/IEC 17024 and national regulatory workflows.',
@@ -25,9 +25,9 @@ const experiences = [
     role: 'Frontend Developer Intern',
     company: 'PT BISA Artifisial Indonesia',
     subCompany: 'MagangHub Program · Ministry of Education & Culture',
-    period: 'Oct 2023 – Apr 2024',
+    period: 'Oct 2025 – Apr 2026', // [Gambar 3: October 2025 - April 2026]
     badge: 'Internship',
-    location: 'Bandung, Indonesia · Hybrid',
+    location: 'Bandung, Indonesia · On-Site',
     summary: 'Contributed to developing and modernizing production-ready web interfaces across multiple company platforms including event tech, edtech, and language learning.',
     achievements: [
       'Tampil.id (Video Conferencing & Event Platform): Redesigned and rebuilt core admin dashboards and user-facing interfaces using HTML5, CSS3, JavaScript, Bootstrap, and CodeIgniter 3 for private and government sector clients.',
@@ -43,9 +43,9 @@ const experiences = [
     role: 'Web Developer Intern',
     company: 'PT Mutiara Medical Service',
     subCompany: 'Healthcare & Medical Solutions',
-    period: 'Mar 2022 – Dec 2022 · 10 mos',
+    period: 'Dec 2022 – Feb 2023', // [Gambar 2: Desember 2022 - Februari 2023]
     badge: 'Internship',
-    location: 'Indonesia · On-site',
+    location: 'Jakarta, Indonesia · On-site',
     summary: 'Conducted requirements analysis and developed intuitive frontend features for company healthcare platforms and patient digital information systems.',
     achievements: [
       'Conducted requirements analysis with medical stakeholders and engineered responsive user-facing features using semantic HTML5, modern CSS3, and JavaScript.',
@@ -60,7 +60,7 @@ const experiences = [
     role: 'Bachelor of Computer Science (S1 Informatika)',
     company: 'Diponegoro University',
     subCompany: 'Faculty of Science and Mathematics',
-    period: '2019 – 2024',
+    period: 'Aug 2018 – Mar 2025', // [Gambar 1: Agustus 2018 - Maret 2025]
     badge: 'GPA 3.35 / 4.00',
     location: 'Semarang, Indonesia',
     summary: 'Graduated with a strong academic foundation in Software Engineering, Web Systems Architecture, Algorithm Design, and Database Management.',
@@ -72,6 +72,7 @@ const experiences = [
     techStack: ['Computer Science', 'Software Engineering', 'Web Development', 'Algorithms', 'Database Systems', 'Git'],
   },
 ]
+
 
 const MainExperience = memo(() => {
   return (
@@ -102,13 +103,12 @@ const MainExperience = memo(() => {
                   <div className="timeline-role-row">
                     <h3 className="timeline-role">{item.role}</h3>
                     {item.badge && (
-                      <span className={`timeline-status-badge ${
-                        item.type === 'work'
-                          ? 'badge-active'
-                          : item.type === 'intern'
+                      <span className={`timeline-status-badge ${item.type === 'work'
+                        ? 'badge-active'
+                        : item.type === 'intern'
                           ? 'badge-intern'
                           : 'badge-edu'
-                      }`}>
+                        }`}>
                         {item.type === 'work' && <span className="status-indicator-dot"></span>}
                         {item.badge}
                       </span>
